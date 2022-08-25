@@ -13,8 +13,11 @@ section#barraimportantes > ul > li {
 	height: 34px;
 	display: flex;
 	align-items: center;
+	margin-left: 20px;
+	position: relative;
 }
 section#barraimportantes > ul > li > span {
+	color: #bfbfbf;
 	font-size: 1.2em;
 	margin-right: 6px;
 }
@@ -22,11 +25,32 @@ section#barraimportantes > ul > li > p {
 	font-size: .9em;
 	margin: 0;
 	padding: 0;
+	position: relative;
+	top: -1px;
 }
 section#barraimportantes > ul > li.favoritos > span {
-	color: #bfbfbf;
 	transition: color 0.3s ease-out;
 }
 section#barraimportantes > ul > li.favoritos:hover > span {
 	color: #f30f0f;
 }
+section#barraimportantes > ul > li.cuenta:hover > span {
+	color: black;
+}
+section#barraimportantes > ul > li > div.desplegado {
+	background: white;
+	border: 1px solid whitesmoke;
+	border-top: none;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	top: 34px;
+	right: 0;
+}
+section#barraimportantes > ul > li > div.desplegado section.loadinggggg {
+	padding-top: 30px;
+}
+section#barraimportantes > ul > li > div.desplegado section.loadinggggg > img {
+	width: 40px;
+}
+
