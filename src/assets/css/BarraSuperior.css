@@ -1,0 +1,16 @@
+section#barrasuperior {
+	background: #e7646a;
+}
+section#barrasuperior > a {
+	text-decoration: none;
+	margin: 0;
+}
+section#barrasuperior > a > p {
+	color: white;
+	margin: 0;
+	padding: 10px 0;
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.7em;
+}

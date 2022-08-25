@@ -1,0 +1,32 @@
+section#barraimportantes {
+	background: whitesmoke;
+	padding: 0 20px;
+}
+section#barraimportantes > ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+section#barraimportantes > ul > li {
+	list-style: none;
+	height: 34px;
+	display: flex;
+	align-items: center;
+}
+section#barraimportantes > ul > li > span {
+	font-size: 1.2em;
+	margin-right: 6px;
+}
+section#barraimportantes > ul > li > p {
+	font-size: .9em;
+	margin: 0;
+	padding: 0;
+}
+section#barraimportantes > ul > li.favoritos > span {
+	color: #bfbfbf;
+	transition: color 0.3s ease-out;
+}
+section#barraimportantes > ul > li.favoritos:hover > span {
+	color: #f30f0f;
+}

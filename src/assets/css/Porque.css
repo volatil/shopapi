@@ -1,0 +1,32 @@
+.productos ~ section#porque > span.separador {
+	border-top: 1px dashed #ccc;
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+section#porque {
+	margin: 40px 0 80px;
+}
+section#porque > h4 {
+	font-family: Recoleta Regular;
+	font-size: 1.2em;
+	text-align: center;
+}
+section#porque > div {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	margin: 0 auto;
+}
+section#porque > div > div {
+	width: 21%;
+	margin: 0 2%;
+}
+section#porque > div > div > img {
+	width: 60%;
+	margin: 0 auto;
+	display: block;
+}
+section#porque > div > div > p {
+	text-align: center;
+}

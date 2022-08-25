@@ -1,0 +1,12 @@
+section#detalle .producto {
+	width: 600px;
+	margin: 0 auto;
+}
+section#detalle .producto > * {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+section#detalle .producto > img {
+	width: 400px;
+}
