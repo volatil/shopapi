@@ -27,6 +27,9 @@ nav > ul > li > a {
 	color: black;
 	text-decoration: none;
 }
+nav > ul > li > a:hover {
+	border-bottom: 2px solid #ccc;
+}
 nav > ul > li > a.tamoActivo {
 	border-bottom: 2px solid black;
 }

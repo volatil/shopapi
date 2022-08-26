@@ -1,3 +1,4 @@
+.producto ~ section#porque > span.separador ,
 .productos ~ section#porque > span.separador {
 	border-top: 1px dashed #ccc;
 	display: block;

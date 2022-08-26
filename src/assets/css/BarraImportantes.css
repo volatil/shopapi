@@ -41,16 +41,44 @@ section#barraimportantes > ul > li > div.desplegado {
 	background: white;
 	border: 1px solid whitesmoke;
 	border-top: none;
-	width: 200px;
+	width: 300px;
 	height: 100px;
 	position: absolute;
 	top: 34px;
 	right: 0;
+	box-shadow: 2px 7px 20px -16px black;
 }
 section#barraimportantes > ul > li > div.desplegado section.loadinggggg {
 	padding-top: 30px;
 }
 section#barraimportantes > ul > li > div.desplegado section.loadinggggg > img {
 	width: 40px;
+}
+section#barraimportantes > ul > li > div.desplegado.micuenta > div > img {
+	width: 70px;
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+section#barraimportantes > ul > li > div.desplegado.micuenta > div > h4 ,
+section#barraimportantes > ul > li > div.desplegado.micuenta > div > p {
+	text-align: left;
+	margin-left: 105px;
+}
+section#barraimportantes > ul > li > div.desplegado.micuenta > div > h4 {
+	text-transform: capitalize;
+	margin-top: 20px;
+	margin-bottom: 0;
+	font-weight: 400;
+	font-size: 1.5em;
+}
+section#barraimportantes > ul > li > div.desplegado.micuenta > div > p {
+	margin-top: 0;
+}
+section#barraimportantes > ul > li > div.desplegado.micuenta > div > p > a {
+	color: #e7646a;
 }
 

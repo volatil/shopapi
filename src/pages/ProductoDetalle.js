@@ -3,12 +3,15 @@ import { useParams , NavLink } from 'react-router-dom';
 
 // COMPONENTS
 import Loading from "../components/Loading/Loading";
+import Button from "components/Button";
 
 // CSS
 import "../assets/css/detalle.css";
 
 // HELPERS
 import { pillCategoryLink , pillCategoryNombre , valoracion } from "../helpers/functions.js";
+import Pill from "components/Pill";
+import Porque from "components/Porque";
 
 function ProductoDetalle() {
 	
@@ -51,15 +54,21 @@ function ProductoDetalle() {
 				producto?.map((p) => {
 					return(
 						<div className="producto" key={ p.id }>
-							<img src={ p.imagen } alt={ p.nombre } />
-							<h4>{ p.nombre }</h4>
-							<p className="precio">$ { p.precio() }</p>
-							<p className="valoracion">{ valoracion( p.valoracion.rating  )}</p>
-							<p>{ p.descripcion }</p>
-							<NavLink to={pillCategoryLink( p.categoria )}>
-								<span>Categoria: </span>
-								<span className="categoria">{ pillCategoryNombre( p.categoria ) }</span>
-							</NavLink>
+							<div>
+								<div className="imagen">
+									<img src={ p.imagen } alt={ p.nombre } />
+								</div>
+								<div className="resto">
+									<h4>{ p.nombre }</h4>
+									<p className="precio">$ { p.precio() }</p>
+									<p className="valoracion">{ valoracion( p.valoracion.rating  )}</p>
+									{/* <Button laclase="disabled" texto="Comprar" /> */}
+									<Button laclase="comprar" texto="Comprar" />
+									<p className="descripcion">{ p.descripcion }</p>
+									<span>Categoria: </span>
+									<Pill link={ pillCategoryLink( p.categoria ) } texto={ pillCategoryNombre( p.categoria ) } />
+								</div>
+							</div>
 						</div>
 					)
 				})
@@ -70,12 +79,7 @@ function ProductoDetalle() {
 
 	if ( loading ) {
 		return (
-			<section className="test">
-				{/* <HelmetResumen title="Cargando Color ..." />
-				<h2>
-					<Icono nombre="palette" />
-					Color Random
-				</h2> */}
+			<section id="detalle">
 				<Loading />
 			</section>
 		);
@@ -84,6 +88,7 @@ function ProductoDetalle() {
 	return (
 		<section id="detalle">
 			<Detalle />
+			<Porque />
 		</section>
 	)
 }

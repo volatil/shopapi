@@ -12,10 +12,10 @@ function ExtractoMicuenta() {
 		
 		setLoading( true )
 		
-		const api = "https://fakestoreapi.com/users/6";
+		const api = "https://fakestoreapi.com/users/8";
 		fetch( api ).then( api => api.json() )
 		.then( x => {
-			console.log( x );
+			// console.log( x );
 			var todo = [];
 			var usuario = {
 				"id" : x.name.id ,
@@ -28,6 +28,7 @@ function ExtractoMicuenta() {
 				"nombre" : usuario.nombre ,
 				"apellido" : usuario.apellido ,
 				"correo" : usuario.correo ,
+				"imagen" : "https://yt3.ggpht.com/ytc/AMLnZu_tNjLFoWptbQBOgLaJ-Ij5QLUZY_46LH_T7mN1Hg=s900-c-k-c0x00ffffff-no-rj" ,
 			});
 			setTraeUsuario( todo )
 			setLoading( false )
@@ -38,27 +39,23 @@ function ExtractoMicuenta() {
 	if ( loading ) {
 		return (
 			<div className="desplegado">
-				{/* <HelmetResumen title="Cargando Color ..." />
-				<h2>
-					<Icono nombre="palette" />
-					Color Random
-				</h2> */}
 				<Loading />
 			</div>
 		);
 	};
 
 	return (
-		<div className="desplegado">
+		<div className="desplegado micuenta">
 			{
 				traeUsuario?.map((u) => {
 					return(
-						<>
-							<h4 style={{ textTransform: "capitalize" , textAlign: "right" , margin: "10px 20px 0 0" , fontWeight: "400" , fontSize: "1.5em" }}>{ u.nombre } { u.apellido }</h4>
-							<p style={{ textAlign: "right" , margin: "10px 20px 0 0" }}>
+						<div key={ u.id }>
+							<img src={ u.imagen } alt={ u.id } />
+							<h4>{ u.nombre } { u.apellido }</h4>
+							<p>
 								<a href={`mailto:${ u.correo }`}>{ u.correo }</a>
 							</p>
-						</>
+						</div>
 					)
 				})
 			}
