@@ -1,5 +1,6 @@
 import { useEffect , useState } from "react";
 import { useParams , NavLink } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 // COMPONENTS
 import Loading from "../components/Loading/Loading";
@@ -107,19 +108,20 @@ function Categoria() {
 
 	if ( loading ) {
 		return (
-			<section className="test">
-				{/* <HelmetResumen title="Cargando Color ..." />
-				<h2>
-					<Icono nombre="palette" />
-					Color Random
-				</h2> */}
-				<Loading />
-			</section>
+			<>
+				<Helmet>
+					<title>Cargando ...</title>
+				</Helmet>
+				<section className="test">
+					<Loading />
+				</section>
+			</>
 		);
 	};
 
 	return (
 		<>
+			<Helmet title={`Categoria ${slug.toUpperCase()} || POLY&BARK`} />
 			<section className="productos">
 				<ListadeProductos />
 			</section>

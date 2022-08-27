@@ -5,27 +5,24 @@ import { Helmet } from "react-helmet";
 // COMPONENTS
 import Loading from "../components/Loading/Loading";
 import Button from "components/Button";
+import Pill from "components/Pill";
+import Porque from "components/Porque";
+import HelmetResumen from "components/HelmetResumen";
 
 // CSS
 import "../assets/css/detalle.css";
 
 // HELPERS
 import { pillCategoryLink , pillCategoryNombre , valoracion } from "../helpers/functions.js";
-import Pill from "components/Pill";
-import Porque from "components/Porque";
 
 function Detalle() {
 	
 	const [ producto , setProducto ] = useState();
 	const [ loading , setLoading ] = useState( false );
-	const [ ElTest , setElTest ] = useState({"algo":"hehe"});
+	
 	let { slug } = useParams();
 
 	useEffect(() => {
-	
-		setElTest({ "hola" : "holaaaaa" , "chao" : "chaito" })
-		// console.log( ElTest );
-		
 		setLoading( true )
 		const api = `https://fakestoreapi.com/products/${ slug }`;
 		fetch( api ).then( api => api.json() )
@@ -86,9 +83,7 @@ function Detalle() {
 	if ( loading ) {
 		return (
 			<section id="detalle">
-				<Helmet>
-					<title>Cargando ...</title>
-				</Helmet>
+				<HelmetResumen />
 				<Loading />
 			</section>
 		);
@@ -96,17 +91,10 @@ function Detalle() {
 
 	return (
 		<section id="detalle">
-			{
-				producto?.map((p) => {
-					return(
-						<>
-							<Helmet>
-								<title>{p.nombre}</title>
-							</Helmet>
-						</>
-					)
-				})
-			}
+			<HelmetResumen 
+				title={`${producto?.map((p) => {return(p.nombre)})} || POLY&BARK`}
+				description={ producto?.map((p) => {return(p.descripcion)}) }
+			/>
 			<Detalle />
 			<Porque />
 		</section>

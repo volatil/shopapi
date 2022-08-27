@@ -1,5 +1,5 @@
 
-- Helmet ( https://www.npmjs.com/package/react-helmet ) ( https://github.com/nfl/react-helmet )
+- Helmet (Completarlo al 100%) ( https://htmlhead.dev/#recommended-minimum )
 - Darkmode
 - Carro de compras
 - Menu Mobile

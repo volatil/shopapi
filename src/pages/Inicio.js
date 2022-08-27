@@ -1,5 +1,10 @@
 import React from 'react'
+import { Helmet } from 'react-helmet';
 
+// COMPONENTS
+import HelmetResumen from 'components/HelmetResumen';
+
+// CSS
 import "../assets/css/Inicio.css";
 
 function Inicio() {
@@ -56,6 +61,10 @@ function Inicio() {
 	
 	return (
 		<section id="inicio">
+			<HelmetResumen 
+				title="POLY&BARK" 
+				description="Shop Poly and Bark’s modern living room furniture. We offer a wide variety of mid century living room furniture. Leather sofas, sectional sofas, daybeds, coffee tables, and more. Order your modern living room furniture today at Poly and Bark."
+			/>
 			<Slide />
 			<Porque />
 			<Nosquieren />
