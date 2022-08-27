@@ -14,7 +14,7 @@ import Error from './layout/Error';
 
 // PAGINAS
 import Inicio from "./pages/Inicio";
-import ProductoDetalle from './pages/ProductoDetalle';
+import Detalle from './pages/Detalle';
 import Categoria from './pages/Categoria';
 
 
@@ -27,7 +27,7 @@ root.render(
 		<Routes>
 			<Route path="/" element={<Inicio />} />
 			<Route path="/categoria/:slug" element={<Categoria />} />
-			<Route path="/producto/:slug" element={<ProductoDetalle />} />
+			<Route path="/producto/:slug" element={<Detalle />} />
 			<Route path="*" element={<Error />} />
 		</Routes>
 		<Footer />

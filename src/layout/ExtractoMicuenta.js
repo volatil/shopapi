@@ -18,7 +18,7 @@ function ExtractoMicuenta() {
 			// console.log( x );
 			var todo = [];
 			var usuario = {
-				"id" : x.name.id ,
+				"id" : x.id ,
 				"nombre" : x.name.firstname ,
 				"apellido" : x.name.lastname ,
 				"correo" : x.email ,

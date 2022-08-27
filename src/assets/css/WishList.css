@@ -1,0 +1,12 @@
+section#wishlist {
+	position: absolute;
+	right: 0;
+}
+section#wishlist > span.wishlist {
+	cursor: pointer;
+}
+section#wishlist > span.wishlist.megusta ,
+section#wishlist > span.wishlist:hover {
+	font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+	color: #e7646a;
+}

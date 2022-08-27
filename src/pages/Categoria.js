@@ -4,6 +4,7 @@ import { useParams , NavLink } from 'react-router-dom';
 // COMPONENTS
 import Loading from "../components/Loading/Loading";
 import Porque from "../components/Porque";
+import WishList from "components/WishList";
 
 // CSS
 import "../assets/css/producto.css";
@@ -86,7 +87,8 @@ function Categoria() {
 				{
 					producto?.map((p) => {
 						return(
-							<div className="producto" key={ p.id }>
+							<div className="producto" data-id={ p.id } key={ p.id }>
+								<WishList elnombre={ p.nombre  } elid={ p.id } />
 								<NavLink to={`/producto/${ p.id }`}>
 									<div className="imagen">
 										<img src={ p.imagen } alt={ p.nombre } />
