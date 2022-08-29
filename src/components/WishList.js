@@ -13,27 +13,22 @@ import { megusta , ordenaComas , toggleClassMegusta , eliminaIDfavorito } from "
 function WishList({ elid = "vacio" } = {}) {
 	
 	const clickModifyWishList = function () {
-		console.log( `id: ${elid}` );
 		
 		let lasclases = $( `section#wishlist[data-id='${ elid }']` ).find( "span" ).attr( "class" );
 		
 		if ( localStorage.getItem( "wishlist" ) ) {
 		
 			if ( lasclases.includes( "simegusta" ) ) {
-				console.log( `Eliminado ${elid}` );
 				eliminaIDfavorito( elid );
 			} else {
-				console.log( `Agregando ${elid}` );
 				localStorage.setItem( "wishlist" , localStorage.getItem( "wishlist" ) + "," + elid );
 			}
 			toggleClassMegusta( elid );
 			ordenaComas();
 		} else {
 			if ( lasclases.includes( "simegusta" ) ) {
-				console.log( `Eliminado ${elid}` );
 				eliminaIDfavorito( elid );
 			} else {
-				console.log( `Agregando ${elid}` );
 				localStorage.setItem( "wishlist" , elid );
 			}
 			toggleClassMegusta( elid );
