@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 const valoracion = function ( estrellas ) {
 	estrellas = String( estrellas )
 	if ( estrellas === "1" ) {
@@ -121,8 +123,67 @@ const pillCategoryLink = function ( slug ) {
 	}
 };
 
+const megusta = function ( elid ) {
+	
+	if ( localStorage.getItem( "wishlist" ) ) {
+		let favoritosID = localStorage.getItem( "wishlist" );
+		var megusta = "nomegusta";
+		for ( var count = 0; count <= favoritosID.split( "," ).length-1; count++ ) {
+			let favoritoID = favoritosID.split( "," )[ count ];
+			favoritoID = Number(favoritoID)
+			if ( elid === favoritoID ) {
+				megusta = "simegusta";
+			}
+		};
+		return megusta;
+	}
+	
+};
+
+const ordenaComas = function () {
+	var favoritos = localStorage.getItem( "wishlist" )
+	favoritos = favoritos.replaceAll( ",," , "," );
+	if ( favoritos[0] === "," ) {
+		favoritos = favoritos.slice( 1 , favoritos.length )
+	}
+	localStorage.setItem( "wishlist" , favoritos );
+};
+
+const toggleClassMegusta = function ( elid ) {
+	$( `section#wishlist[data-id='${ elid }']` ).find( "span" ).toggleClass( "nomegusta simegusta" );
+};
+
+const eliminaIDfavorito = function ( elid ) {
+	
+	let favoritos = localStorage.getItem( "wishlist" );
+	let cantidad = favoritos.length-1;
+	let elarray = [];
+	for ( var count = 0; count <= cantidad; count++ ) {
+		let elid = favoritos.split(",")[ count ];
+		elid === "" ? elid = NaN :
+		elid = Number( elid );
+		if ( !isNaN(elid)  ) {
+			elarray.push( elid );
+		} else { 
+		}
+	};
+
+	for( var i = 0; i < elarray.length; i++){ 
+		if ( elarray[i] === elid) { 
+			elarray.splice(i, 1); 
+		}
+	}
+	
+	localStorage.setItem( "wishlist" , elarray );
+	
+};
+
 export { 
 	valoracion , 
 	pillCategoryNombre , 
 	pillCategoryLink ,
+	megusta ,
+	ordenaComas ,
+	toggleClassMegusta ,
+	eliminaIDfavorito ,
 }

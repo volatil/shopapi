@@ -89,7 +89,7 @@ function Categoria() {
 					producto?.map((p) => {
 						return(
 							<div className="producto" data-id={ p.id } key={ p.id }>
-								<WishList elnombre={ p.nombre  } elid={ p.id } />
+								<WishList elid={ p.id } />
 								<NavLink to={`/producto/${ p.id }`}>
 									<div className="imagen">
 										<img src={ p.imagen } alt={ p.nombre } />

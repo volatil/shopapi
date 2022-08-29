@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import $ from "jquery";
 
 // COMPONENT
@@ -7,24 +7,42 @@ import Icono from "components/Icono";
 // CSS
 import "assets/css/WishList.css";
 
-function WishList({ elid = "vacio" , elnombre = "no seteado" } = {}) {
-	
-	// megusta
-	useEffect(() => {
-		const losgustados = localStorage.getItem( "wishlist" );
-		for ( var count = 0; count <= String( losgustados ).split( "," ).length-1; count++ ) {
-			let prodId = losgustados.split( "," )[ count ];
-			$( `.producto[data-id=${prodId}] section#wishlist > span` ).addClass( "megusta" )
-		};
-	},[])
-	
-	const clickWish = function () {
-		localStorage.setItem( "wishlist" , localStorage.getItem( "wishlist" ) + "," + elid );
-	};
+// HELPERS
+import { megusta , ordenaComas , toggleClassMegusta , eliminaIDfavorito } from "helpers/functions";
 
+function WishList({ elid = "vacio" } = {}) {
+	
+	const clickModifyWishList = function () {
+		console.log( `id: ${elid}` );
+		
+		let lasclases = $( `section#wishlist[data-id='${ elid }']` ).find( "span" ).attr( "class" );
+		
+		if ( localStorage.getItem( "wishlist" ) ) {
+		
+			if ( lasclases.includes( "simegusta" ) ) {
+				console.log( `Eliminado ${elid}` );
+				eliminaIDfavorito( elid );
+			} else {
+				console.log( `Agregando ${elid}` );
+				localStorage.setItem( "wishlist" , localStorage.getItem( "wishlist" ) + "," + elid );
+			}
+			toggleClassMegusta( elid );
+			ordenaComas();
+		} else {
+			if ( lasclases.includes( "simegusta" ) ) {
+				console.log( `Eliminado ${elid}` );
+				eliminaIDfavorito( elid );
+			} else {
+				console.log( `Agregando ${elid}` );
+				localStorage.setItem( "wishlist" , elid );
+			}
+			toggleClassMegusta( elid );
+		}
+	};
+	
 	return (
-		<section onClick={ clickWish } id="wishlist">
-			<Icono className="wishlist" nombre="favorite" outline="true" />
+		<section data-id={ elid } onClick={ clickModifyWishList } id="wishlist">
+			<Icono className={`wishlist ${ megusta( elid ) }`} nombre="favorite" outline="true" />
 		</section>
 	)
 }

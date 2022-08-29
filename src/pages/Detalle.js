@@ -7,6 +7,7 @@ import Button from "components/Button";
 import Pill from "components/Pill";
 import Porque from "components/Porque";
 import HelmetResumen from "components/HelmetResumen";
+import WishList from "components/WishList";
 
 // CSS
 import "../assets/css/detalle.css";
@@ -55,8 +56,9 @@ function Detalle() {
 				{
 				producto?.map((p) => {
 					return(
-						<div className="producto" key={ p.id }>
+						<div className="producto" data-id={ p.id } key={ p.id }>
 							<div>
+								<WishList elid={ p.id } />
 								<div className="imagen">
 									<img src={ p.imagen } alt={ p.nombre } />
 								</div>

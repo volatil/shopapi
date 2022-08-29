@@ -11,10 +11,14 @@ function ExtractoMicuenta() {
 	useEffect(() => {
 		
 		setLoading( true )
-		
+		if ( !localStorage.getItem( "wishlista" ) ) {
+			setTraeUsuario( "NO hay Favoritos 😢" );
+		} else {
+			setTraeUsuario( "SI hay Favoritos 🥳" );
+		}
 		setLoading( false )
 
-	},[]);
+	},[setTraeUsuario]);
 
 	if ( loading ) {
 		return (
@@ -27,6 +31,9 @@ function ExtractoMicuenta() {
 	return (
 		<div className="desplegado favoritos">
 			<h2>Favoritito ito 😎</h2>
+			{
+				console.log( traeUsuario )
+			}
 		</div>
 	)
 }
