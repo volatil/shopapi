@@ -1,6 +1,5 @@
 import { useEffect , useState } from "react";
 import { useParams } from 'react-router-dom';
-import { Helmet } from "react-helmet";
 
 // COMPONENTS
 import Loading from "../components/Loading/Loading";
@@ -46,7 +45,7 @@ function Detalle() {
 				} ,
 			}];
 			setProducto( todo );
-			setLoading( false )
+			setLoading( false );
 		})
 	},[slug])
 
@@ -79,7 +78,7 @@ function Detalle() {
 			</>
 		)
 	}
-
+	
 	if ( loading ) {
 		return (
 			<section id="detalle">
