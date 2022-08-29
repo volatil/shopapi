@@ -1,4 +1,7 @@
 
+
+### TASKS
+
 - Helmet (Completarlo al 100%) ( https://htmlhead.dev/#recommended-minimum )
 - Darkmode
 - Carro de compras
