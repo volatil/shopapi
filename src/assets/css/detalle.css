@@ -28,9 +28,6 @@ section#detalle .producto > div > .resto > h4 {
 	font-size: 3em;
 	font-weight: 400;
 	margin: 0;
-	
-	
-	
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -44,6 +41,15 @@ section#detalle .producto > div > .resto > p.precio {
 	font-weight: 400;
 	margin-bottom: 0;
 	color: #ff0000ad;
+}
+section#detalle .producto > div > .resto > .valoracion {
+	display: flex;
+}
+section#detalle .producto > div > .resto > .valoracion .cantidad {
+	color: #888;
+	font-size: .9em;
+	line-height: 2.2em;
+	margin-left: 5px;
 }
 section#detalle .producto > div > .resto > p.descripcion {
 	text-align: left;

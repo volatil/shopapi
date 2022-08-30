@@ -65,8 +65,10 @@ function Detalle() {
 								<div className="resto">
 									<h4>{ p.nombre }</h4>
 									<p className="precio">$ { p.precio() }</p>
-									<p className="valoracion">{ valoracion( p.valoracion.rating  )}</p>
-									{/* <Button laclase="disabled" texto="Comprar" /> */}
+									<div className="valoracion">
+										<p>{ valoracion( p.valoracion.rating  )}</p>
+										<p className="cantidad">({ p.valoracion.cantidad }) votos</p>
+									</div>
 									<Button laclase="comprar" texto="Comprar" />
 									<p className="descripcion">{ p.descripcion }</p>
 									<span>Categoria: </span>
