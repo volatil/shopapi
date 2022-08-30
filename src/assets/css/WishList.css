@@ -1,3 +1,6 @@
+.desplegado.favoritos section#wishlist {
+	right: 10px;
+}
 #detalle section#wishlist {
 	right: -60px;
 }
