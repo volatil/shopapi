@@ -27,20 +27,12 @@ function ExtractoMicuenta() {
 					"categoria" : resumen.category ,
 					"descripcion" : resumen.description ,
 					"precio" : function(){
-						
-						
-						
-						
 						let precio = resumen.price;
 						precio = precio * 918;
 						precio = String(precio).split( "." )[0];
 						precio = Number(precio).toLocaleString('es-CL');
 						return precio;
-						
 					},
-						
-						
-					
 					"imagen" : resumen.image ,
 				}
 				todo.push({
