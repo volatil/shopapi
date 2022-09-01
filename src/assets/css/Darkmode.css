@@ -1,4 +1,15 @@
+:root {
+	--casiNegro : #2d2d2d;
+	--negro     : #1e1e1e;
+}
+body[data-theme=dark] * ,
 body[data-theme=dark] {
-	background-color: black;
-	color: white;
+	background-color: var( --negro ) !important;
+}
+body[data-theme=dark] * ,
+body[data-theme=dark] p {
+	color: white !important;
+}
+body[data-theme=dark] section {
+	background-color: var( --casiNegro ) !important;
 }
