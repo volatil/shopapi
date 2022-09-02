@@ -5,7 +5,8 @@ function Error() {
 	return (
 		<>
 			<HelmetResumen 
-				title={`ERROR || POLY&BARK`}
+				title="ERROR || POLY&BARK"
+				description="Pagina no encontrada"
 			/>
 			<section id="Error">
 				<h1 style={{ textAlign: "center" , fontSize: "4em" , margin: "50px 0 0 0" }}>ERROR 404!</h1>
