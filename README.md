@@ -3,7 +3,7 @@
 ### TASKS
 
 - Helmet (Completarlo al 100%) ( https://htmlhead.dev/#recommended-minimum )
-- Darkmode
+- Darkmode ( https://codepen.io/antlio/pen/LYVVXLJ )
 - Carro de compras
 - Menu Mobile
 
