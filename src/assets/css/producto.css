@@ -9,6 +9,9 @@
 	padding: 10px 0 20px;
 	position: relative;
 }
+.producto:hover img {
+	opacity: .9;
+}
 .producto > a {
 	color: black;
 	text-decoration: none;
