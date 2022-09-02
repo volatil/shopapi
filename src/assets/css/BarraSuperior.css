@@ -8,9 +8,9 @@ section#barrasuperior > a {
 section#barrasuperior > a > p {
 	color: white;
 	margin: 0;
-	padding: 10px 0;
 	text-align: center;
 	font-weight: 600;
 	text-transform: uppercase;
 	font-size: 0.7em;
+	padding: 10px 1%;
 }
