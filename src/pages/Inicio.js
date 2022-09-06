@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
 
 // COMPONENTS
 import HelmetResumen from 'components/HelmetResumen';
