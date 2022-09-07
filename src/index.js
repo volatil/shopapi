@@ -25,7 +25,7 @@ import Darkmode from 'layout/Darkmode';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<BrowserRouter>
-		{/* <Darkmode /> */}
+		<Darkmode />
 		<BarraSuperior />
 		<BarraImportantes />
 		<Header />

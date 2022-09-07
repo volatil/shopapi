@@ -13,3 +13,8 @@ body[data-theme=dark] p {
 body[data-theme=dark] section {
 	background-color: var( --casiNegro ) !important;
 }
+
+#darkmode input[type=checkbox] {
+	width: 300px;
+	height: 300px;
+}
