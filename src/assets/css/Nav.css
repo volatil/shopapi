@@ -41,6 +41,7 @@ nav > ul > li > a.tamoActivo {
 	}
 	.menuMobile.desplegado {
 		position: absolute;
+		z-index: 2;
 		top: 10px;
 		right: 10px;
 	}
@@ -73,6 +74,7 @@ nav > ul > li > a.tamoActivo {
 		display: block;
 		background: red;
 		position: absolute;
+		z-index: 1;
 		top: 0;
 		right: 0;
 		width: 70%;
