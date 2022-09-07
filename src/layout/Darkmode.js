@@ -24,25 +24,61 @@ function Darkmode() {
 	};
 	
 	const chex = function () {
-		let estadoCheck = $( "#darkmode input[type=checkbox]" ).prop('checked')
-		if ( estadoCheck ) {
-			localStorage.setItem( "darkmode" , "si" );
-			setDarkmode( "si" );
-		} else {
-			localStorage.setItem( "darkmode" , "no" );
-			setDarkmode( "no" );
-		};
-		darkmode === "si" ? document.body.setAttribute("data-theme", "dark") : document.body.setAttribute("data-theme", "light")
+		setTimeout(function(){
+			let estadoCheck = $( "#darkmode input[type=checkbox]" ).prop('checked')
+			if ( estadoCheck ) {
+				localStorage.setItem( "darkmode" , "si" );
+				setDarkmode( "si" );
+			} else {
+				localStorage.setItem( "darkmode" , "no" );
+				setDarkmode( "no" );
+			};
+			darkmode === "si" ? document.body.setAttribute("data-theme", "dark") : document.body.setAttribute("data-theme", "light")
+		},500);
 	};
 	
 	useEffect(() => {
 		estadoDarkmode()
-	})
+	});
+	
+	const Toggle = function () {
+		return(
+			<label>
+				<input onClick={chex} type="checkbox" />
+				<div className="planet"></div>
+				<div className="elements">
+					<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="250" cy="250" r="200" />
+					</svg>
+					<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="250" cy="250" r="200" />
+					</svg>
+					<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="250" cy="250" r="200" />
+					</svg>
+					<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="250" cy="250" r="200" />
+					</svg>
+					<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="250" cy="250" r="200" />
+					</svg>
+					<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="250" cy="250" r="200" />
+					</svg>
+					<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="250" cy="250" r="200" />
+					</svg>
+					<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="250" cy="250" r="200" />
+					</svg>
+				</div>
+			</label>
+		);
+	};
 
 	return (
 		<section id="darkmode">
-			<h1>DarkMode</h1>
-			<input onClick={chex} type="checkbox" />
+			<Toggle />
 		</section>
 	)
 }

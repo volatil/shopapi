@@ -16,11 +16,7 @@ import Error from './layout/Error';
 import Inicio from "./pages/Inicio";
 import Detalle from './pages/Detalle';
 import Categoria from './pages/Categoria';
-
-
-
 import Darkmode from 'layout/Darkmode';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
