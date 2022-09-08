@@ -8,12 +8,20 @@ function Nav() {
 		$( ".menuMobile" ).toggleClass( "desplegado" );
 		
 		if ( $( ".menuMobile" ).attr( "class" ).includes( "desplegado" ) ) {
+			// Desplegado SI
 			$( "nav" ).addClass( "desplegado" );
-			console.log( `Desplegado SI` );
+			$( "body" ).css( "overflow" , "hidden" );
+			$( "body" ).append( `<div class="sombraMenu"></div>` );
 		} else {
+			// Desplegado NO
 			$( "nav" ).removeClass( "desplegado" );
-			console.log( `Desplegado NO` );
+			$( "body" ).css( "overflow" , "auto" );
+			$( "body .sombraMenu" ).remove();
 		};
+		
+		$( ".sombraMenu" ).on( "click" , function(){
+			$( ".menuMobile.desplegado" ).click();
+		})
 	};
 	
 	return (
