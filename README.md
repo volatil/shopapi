@@ -8,6 +8,7 @@
 
 ## Tambien instalar
 - npm i helmet
+- npm i jquery
 
 <!-- # Getting Started with Create React App
 
