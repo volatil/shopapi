@@ -34,6 +34,9 @@ function Nav() {
 			<nav>
 				<ul>
 					<li>
+						<NavLink className={({ isActive }) => (isActive ? 'tamoActivo' : '')} to="/clickzapatilla">Click</NavLink>
+					</li>
+					<li>
 						<NavLink className={({ isActive }) => (isActive ? 'tamoActivo' : '')} to="/categoria/todas">Productos</NavLink>
 					</li>
 					<li>

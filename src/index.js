@@ -11,12 +11,17 @@ import BarraImportantes from './layout/BarraImportantes';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Error from './layout/Error';
+import Darkmode from 'layout/Darkmode';
 
 // PAGINAS
 import Inicio from "./pages/Inicio";
 import Detalle from './pages/Detalle';
 import Categoria from './pages/Categoria';
-import Darkmode from 'layout/Darkmode';
+
+
+
+
+import Clickzapatilla from './pages/Clickzapatilla';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +32,7 @@ root.render(
 		<Header />
 		<Routes>
 			<Route path="/" element={<Inicio />} />
+			<Route path="/clickzapatilla" element={<Clickzapatilla />} />
 			<Route path="/categoria/:slug" element={<Categoria />} />
 			<Route path="/producto/:slug" element={<Detalle />} />
 			<Route path="*" element={<Error />} />
