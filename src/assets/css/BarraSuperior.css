@@ -1,16 +1,13 @@
 section#barrasuperior {
-	background: #e7646a;
+	background: var( --celeste );
 }
-section#barrasuperior > a {
-	text-decoration: none;
-	margin: 0;
-}
-section#barrasuperior > a > p {
+section#barrasuperior > p {
 	color: white;
 	margin: 0;
 	text-align: center;
-	font-weight: 600;
+	font-weight: 400;
 	text-transform: uppercase;
-	font-size: 0.7em;
+	font-size: 1em;
+	letter-spacing: 0.05em;
 	padding: 10px 1%;
 }

@@ -37,33 +37,11 @@ function Clickzapatilla() {
 
 	return (
 		<>
-			<HelmetResumen 
-				title="Click Zapatilla || POLY&BARK"
-				description="Test ClickZapatilla.cl"
-			/>
+			<HelmetResumen  title="Click Zapatilla || POLY&BARK" description="Test ClickZapatilla.cl" />
 			<section id="clickzapatilla">
 				<h1>CLICK ZAPATILLA !</h1>
 				<div className="productos">
-					{
-						// console.log( productos )
-					}
 					<Test data={ productos } />
-					{
-					// productos?.map((p) => {
-					// 	return(
-					// 		<div className="producto" key={ p.z.id  }>
-					// 			<Test 
-					// 				id={ p.z.id }
-					// 				modelo={ p.z.modelo }
-					// 				imagen={ p.z.imagen() }
-					// 				marca={ p.z.marca }
-					// 				precio={ p.z.precio }
-					// 				tallas={ p.z.tallas }
-					// 			/>
-					// 		</div>
-					// 	)
-					// })
-					}
 				</div>
 			</section>
 		</>

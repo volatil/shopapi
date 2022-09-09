@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "assets/imagenes/logo202106030238.png";
 
 // LAYOUT
 import Nav from '../layout/Nav';
@@ -11,7 +12,7 @@ function Header() {
 		<header>
 			<div className="logo">
 				<NavLink to="/">
-					<img src="https://cdn.shopify.com/s/files/1/1150/6518/files/Wordmark_Black_Web_360x_1_250x.png?v=1643609809" alt="Poly & Bark" />
+					<img src={ Logo } alt="Poly & Bark" />
 				</NavLink>
 			</div>
 			<Nav />
